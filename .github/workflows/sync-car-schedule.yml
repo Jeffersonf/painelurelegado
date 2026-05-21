@@ -1,0 +1,30 @@
+name: Sync car schedule
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/30 * * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node tools/sync-car-schedule.js
+      - name: Commit updated car schedule
+        run: |
+          if git diff --quiet -- frontend/data/car-schedule.json frontend/data/car-schedule.csv; then
+            echo "No car schedule changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/data/car-schedule.json frontend/data/car-schedule.csv
+          git commit -m "Update car schedule data"
+          git push

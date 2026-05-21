@@ -631,6 +631,7 @@ async function fetchSharePointList(url) {
   const localUrl = `/api/sharepoint-list?url=${encodeURIComponent(url)}`;
   const attempts = [
     () => fetch(localUrl, { cache: 'no-store' }),
+    () => fetch('./data/car-schedule.json', { cache: 'no-store' }),
     () => fetch(sharePointListApiUrl(url), {
       cache: 'no-store',
       credentials: 'include',
