@@ -2936,6 +2936,31 @@ textarea {
   gap: 14px;
 }
 
+.supervisor-april-notice {
+  display: grid;
+  gap: 10px;
+  padding: 16px 18px;
+  border: 1px solid rgba(255, 106, 82, .78);
+  border-left-width: 5px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, rgba(255, 106, 82, .18), rgba(255, 106, 82, .045));
+  color: var(--tx);
+}
+
+.supervisor-april-notice strong {
+  color: #ffd4cc;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.supervisor-april-notice span {
+  max-width: 760px;
+  color: var(--mut);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
 .supervisor-sheet-summary {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

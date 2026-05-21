@@ -2131,6 +2131,7 @@ function renderSupervisors() {
     });
     const syncedCount = sheetRows.filter((row) => row.supervisor.sourceSyncedAt).length;
     panelGrid.innerHTML = `
+      ${supervisorAprilNoticeMarkup(viewMonthKey)}
       <div class="supervisor-sheet-table-wrap">
         <table class="supervisor-sheet-table">
           <thead>
@@ -2727,6 +2728,16 @@ function supervisorSheetMonthLabel(monthKey) {
   const names = ['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
   if (!year || !month || month < 1 || month > 12) return 'mes nao informado';
   return `${names[month - 1]} de ${year}`;
+}
+
+function supervisorAprilNoticeMarkup(monthKey) {
+  if (monthKey !== '2026-04') return '';
+  return `
+    <div class="supervisor-april-notice" role="note">
+      <strong>AVISO IMPORTANTE SOBRE ABRIL</strong>
+      <span>A planilha de abril foi usada apenas como teste de importacao e validacao do painel. Abril nao sera considerado para acompanhamento oficial; a partir de maio a supervisao usa a planilha oficial nova.</span>
+    </div>
+  `;
 }
 
 function supervisorMonthlySheetLinks() {
