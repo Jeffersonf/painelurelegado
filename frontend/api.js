@@ -543,8 +543,16 @@ function normalizeCsvHeader(value) {
 function csvValue(record, names) {
   const wanted = names.map(normalizeCsvHeader);
   const entries = Object.entries(record).filter(([key]) => wanted.includes(key));
-  const filled = entries.find(([, value]) => String(value || '').trim());
-  return repairMojibakeString((filled || entries[0])?.[1] || '').trim();
+  const valueText = (value) => {
+    if (value == null) return '';
+    if (Array.isArray(value)) return value.map(valueText).filter(Boolean).join(', ');
+    if (typeof value === 'object') {
+      return valueText(value.Title || value.LookupValue || value.Email || value.Name || value.Value || value.Label || value.results || '');
+    }
+    return repairMojibakeString(value).trim();
+  };
+  const filled = entries.find(([, value]) => valueText(value));
+  return valueText((filled || entries[0])?.[1] || '');
 }
 
 function csvRecords(headers, dataRows) {
@@ -656,12 +664,31 @@ function officialCarScheduleLink() {
 }
 
 function carScheduleRowToTask(row, source) {
-  const vehicle = csvValue(row, ['Carro', 'Veiculo', 'Veículo', 've_x00ed_culo', 'Vehicle', 'Recurso', 'Title']) || 'Carro oficial';
+  const vehicle = csvValue(row, ['Carro', 'Carro Oficial', 'Veiculo', 'Veículo', 've_x00ed_culo', 'Vehicle', 'Recurso', 'Placa', 'Title']) || 'Carro oficial';
+  const dateSource = csvValue(row, [
+    'Data',
+    'Data da Reserva',
+    'data_x0020_da_x0020_reserva',
+    'Data Reserva',
+    'Data Saida',
+    'Data da Saida',
+    'Data de Saida',
+    'Saida',
+    'Data do Agendamento',
+    'Quando',
+    'EventDate',
+    'Inicio',
+    'Início'
+  ]);
   const date = parseSourceDate(csvValue(row, [
     'Data',
     'Data da Reserva',
     'data_x0020_da_x0020_reserva',
     'Data Reserva',
+    'Data Saida',
+    'Data da Saida',
+    'Data de Saida',
+    'Saida',
     'Data do Agendamento',
     'Quando',
     'EventDate',
@@ -676,14 +703,16 @@ function carScheduleRowToTask(row, source) {
     'Horário da Reserva',
     'horario_x0020_da_x0020_reserva',
     'Hora da Saida',
-    'Hora da Saída'
-  ]));
-  const requester = csvValue(row, ['Solicitante', 'Responsavel', 'Responsável', 'Responsavel pela Reserva', 'responsavel_x0020_pela_x0020_reserva', 'Author', 'Owner']);
-  const destination = csvValue(row, ['Destino', 'Local', 'Destination', 'Place', 'Local Destino']) || 'Destino nao informado';
-  const driver = csvValue(row, ['Motorista', 'Driver']);
-  const status = csvValue(row, ['Status', 'Situacao', 'Situação', 'situa_x00e7__x00e3_o']) || 'reservado';
-  const note = csvValue(row, ['Observacao', 'Observação', 'Descricao', 'Descrição', 'descri_x00e7__x00e3_o', 'Motivo', 'Note']);
-  const title = csvValue(row, ['Titulo', 'Título', 'Title', 'Motivo']) || `Reserva de ${vehicle}`;
+    'Hora da Saída',
+    'Hora de Saida',
+    'Saida Horario'
+  ])) || parseSourceTime(dateSource);
+  const requester = csvValue(row, ['Solicitante', 'Requisitante', 'Setor', 'Responsavel', 'Responsável', 'Responsavel pela Reserva', 'responsavel_x0020_pela_x0020_reserva', 'Author', 'Owner']);
+  const destination = csvValue(row, ['Destino', 'Local', 'Destination', 'Place', 'Local Destino', 'LocalExterno', 'Escolas', 'Itinerario', 'Roteiro']) || 'Destino nao informado';
+  const driver = csvValue(row, ['Motorista', 'Condutor', 'Driver']);
+  const status = csvValue(row, ['Status', 'Situacao', 'Situação', 'situa_x00e7__x00e3_o', 'Autorizacao', 'Autorização', 'Aprovacao', 'Aprovação']) || 'reservado';
+  const note = csvValue(row, ['Observacao', 'Observação', 'Descricao', 'Descrição', 'descri_x00e7__x00e3_o', 'Motivo', 'MotivoVisita', 'Finalidade', 'ComentárioGestor', 'Coment_x00e1_rioGestor', 'Note']);
+  const title = csvValue(row, ['Titulo', 'Título', 'Title', 'Motivo', 'MotivoVisita']) || `Reserva de ${vehicle}`;
   const rawId = csvValue(row, ['ID', 'Id']) || `${date}|${time}|${vehicle}|${requester}|${destination}`;
   return {
     id: `sharepoint-cars-${normalizeKey(rawId).replace(/[^a-z0-9]+/g, '-')}`,
