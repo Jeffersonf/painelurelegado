@@ -56,6 +56,17 @@ function sendText(res, statusCode, text) {
   res.end(text);
 }
 
+function sendCsv(res, filename, text) {
+  res.writeHead(200, {
+    'Content-Type': 'text/csv; charset=utf-8',
+    'Content-Disposition': `inline; filename="${filename}"`,
+    'Cache-Control': 'no-store, max-age=0',
+    Pragma: 'no-cache',
+    Expires: '0'
+  });
+  res.end(`\uFEFF${text}`);
+}
+
 function assertSharePointUrl(parsed) {
   if (!/\.sharepoint\.com$/i.test(parsed.hostname)) {
     throw new Error('Somente listas SharePoint sao aceitas.');
@@ -106,6 +117,126 @@ function unwrapSharePointItems(payload) {
   if (Array.isArray(payload?.d?.results)) return payload.d.results;
   if (Array.isArray(payload?.d)) return payload.d;
   return [];
+}
+
+function extractJsonObjectAfter(source, marker) {
+  const markerIndex = source.indexOf(marker);
+  if (markerIndex < 0) return '';
+  const start = source.indexOf('{', markerIndex);
+  if (start < 0) return '';
+  let depth = 0;
+  let inString = false;
+  let escaped = false;
+  for (let index = start; index < source.length; index += 1) {
+    const char = source[index];
+    if (inString) {
+      if (escaped) {
+        escaped = false;
+      } else if (char === '\\') {
+        escaped = true;
+      } else if (char === '"') {
+        inString = false;
+      }
+      continue;
+    }
+    if (char === '"') {
+      inString = true;
+      continue;
+    }
+    if (char === '{') depth += 1;
+    if (char === '}') {
+      depth -= 1;
+      if (depth === 0) return source.slice(start, index + 1);
+    }
+  }
+  return '';
+}
+
+function unwrapSharePointHtmlItems(html) {
+  const objectText = extractJsonObjectAfter(String(html || ''), 'var g_listData =');
+  if (!objectText) return [];
+  try {
+    const payload = JSON.parse(objectText);
+    return Array.isArray(payload?.ListData?.Row) ? payload.ListData.Row : [];
+  } catch {
+    return [];
+  }
+}
+
+async function fetchSharedSharePointListItems(url) {
+  let nextUrl = url;
+  const cookies = new Map();
+  let response = null;
+  for (let redirectCount = 0; redirectCount < 10; redirectCount += 1) {
+    response = await fetch(nextUrl, {
+      redirect: 'manual',
+      headers: {
+        Accept: 'text/html,application/xhtml+xml',
+        'User-Agent': 'Mozilla/5.0',
+        ...(cookies.size ? { Cookie: Array.from(cookies.values()).join('; ') } : {})
+      }
+    });
+    const setCookie = response.headers.getSetCookie
+      ? response.headers.getSetCookie()
+      : String(response.headers.get('set-cookie') || '').split(/,(?=\s*[^;,=]+=[^;,]+)/);
+    setCookie.filter(Boolean).forEach((item) => {
+      const pair = item.split(';')[0].trim();
+      const name = pair.split('=')[0];
+      if (name && pair.includes('=')) cookies.set(name, pair);
+    });
+    if (![301, 302, 303, 307, 308].includes(response.status)) break;
+    const location = response.headers.get('location');
+    if (!location) break;
+    nextUrl = new URL(location, nextUrl).toString();
+  }
+  if (!response.ok) return [];
+  return unwrapSharePointHtmlItems(await response.text());
+}
+
+async function fetchSharePointListItems(sourceUrl) {
+  const response = await fetch(await resolveSharePointListApiUrl(sourceUrl), {
+    headers: { Accept: 'application/json;odata=nometadata' }
+  });
+  if (!response.ok) {
+    const sharedItems = await fetchSharedSharePointListItems(sourceUrl);
+    if (sharedItems.length) return { items: sharedItems, source: 'sharepoint-public-html' };
+    const error = new Error(`SharePoint retornou HTTP ${response.status}.`);
+    error.statusCode = response.status;
+    throw error;
+  }
+  const items = unwrapSharePointItems(await response.json());
+  if (items.length) return { items, source: 'sharepoint-rest' };
+  const sharedItems = await fetchSharedSharePointListItems(sourceUrl);
+  if (sharedItems.length) return { items: sharedItems, source: 'sharepoint-public-html' };
+  return { items, source: 'sharepoint-rest' };
+}
+
+function csvCell(value) {
+  if (value == null) return '';
+  let text = '';
+  if (Array.isArray(value)) {
+    text = value.map(csvCell).filter(Boolean).join('; ');
+  } else if (typeof value === 'object') {
+    text = csvCell(value.lookupValue || value.Title || value.LookupValue || value.Email || value.Name || value.Value || value.Label || '');
+  } else {
+    text = String(value);
+  }
+  return /[",\r\n;]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
+}
+
+function sharePointItemsToCsv(items) {
+  const rows = Array.isArray(items) ? items : [];
+  const ignored = new Set(['PermMask', 'FSObjType', 'UniqueId', 'ContentTypeId', 'FileRef', 'Attachments', 'SMTotalSize', 'ScopeId', 'owshiddenversion', 'Restricted', 'PreviewThumbnailsQualitySets']);
+  const headers = Array.from(rows.reduce((set, row) => {
+    Object.keys(row || {}).forEach((key) => {
+      if (!ignored.has(key) && !key.startsWith('_') && !key.endsWith('.FriendlyDisplay')) set.add(key);
+    });
+    return set;
+  }, new Set()));
+  return [
+    headers.map(csvCell).join(','),
+    ...rows.map((row) => headers.map((header) => csvCell(row?.[header])).join(','))
+  ].join('\r\n');
 }
 
 function validateStateShape(candidate) {
@@ -377,19 +508,30 @@ const server = http.createServer(async (req, res) => {
         sendJson(res, 400, { error: 'URL da lista nao informada.' });
         return;
       }
-      const response = await fetch(await resolveSharePointListApiUrl(sourceUrl), {
-        headers: { Accept: 'application/json;odata=nometadata' }
+      sendJson(res, 200, await fetchSharePointListItems(sourceUrl));
+    } catch (error) {
+      sendJson(res, error.statusCode || 400, {
+        error: error.message,
+        hint: 'Se a lista for restrita, o servidor local nao recebe seu login do navegador.'
       });
-      if (!response.ok) {
-        sendJson(res, response.status, {
-          error: `SharePoint retornou HTTP ${response.status}.`,
-          hint: 'Se a lista for restrita, o servidor local nao recebe seu login do navegador.'
-        });
+    }
+    return;
+  }
+
+  if (requestUrl.pathname === '/api/sharepoint-list.csv' && req.method === 'GET') {
+    try {
+      const sourceUrl = requestUrl.searchParams.get('url') || '';
+      if (!sourceUrl) {
+        sendJson(res, 400, { error: 'URL da lista nao informada.' });
         return;
       }
-      sendJson(res, 200, { items: unwrapSharePointItems(await response.json()) });
+      const { items } = await fetchSharePointListItems(sourceUrl);
+      sendCsv(res, 'sharepoint-list.csv', sharePointItemsToCsv(items));
     } catch (error) {
-      sendJson(res, 400, { error: error.message });
+      sendJson(res, error.statusCode || 400, {
+        error: error.message,
+        hint: 'Nao foi possivel gerar CSV da lista SharePoint.'
+      });
     }
     return;
   }

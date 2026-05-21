@@ -2849,6 +2849,13 @@ function monthCarBookings(items = carBookings()) {
   });
 }
 
+function carDateLabel(value) {
+  if (!value || !/^\d{4}-\d{2}-\d{2}/.test(value)) return value || 'Sem data';
+  const date = new Date(`${value.slice(0, 10)}T00:00:00`);
+  if (Number.isNaN(date.getTime())) return value;
+  return date.toLocaleDateString('pt-BR', { weekday: 'short', day: '2-digit', month: '2-digit' });
+}
+
 function setSimpleSelectOptions(select, options, currentValue = 'all') {
   if (!select) return;
   const value = options.some((item) => item.value === currentValue) ? currentValue : 'all';
@@ -3009,7 +3016,7 @@ function renderCars() {
     <section class="car-day-list">
       ${Array.from(byDate.entries()).map(([date, items]) => `
         <article class="car-day-group">
-          <div class="car-day-head"><strong>${esc(date)}</strong><small>${esc(String(items.length))} reserva(s)</small></div>
+          <div class="car-day-head"><strong>${esc(carDateLabel(date))}</strong><small>${esc(String(items.length))} reserva(s)</small></div>
           ${items.map((item) => {
             const tone = carStatusTone(item.status);
             return `
@@ -3017,6 +3024,7 @@ function renderCars() {
                 <span class="car-time"><strong>${esc(item.time || '--:--')}</strong><small>${esc(item.requestId || '--')}</small></span>
                 <span class="car-route"><strong>${esc(item.destination || 'Destino nao informado')}</strong><small>${esc(item.vehicle)}</small></span>
                 <span class="car-requester"><strong>${esc(item.requester || 'Setor nao informado')}</strong><small>${esc(item.driver || 'Condutor a definir')}</small></span>
+                <span class="car-note">${esc(item.note || item.title || '')}</span>
                 <em class="diag-pill ${tone === 'danger' ? 'pill-danger' : tone === 'warn' ? 'pill-warn' : tone === 'info' ? 'pill-info' : 'pill-ok'}">${esc(item.status || 'pendente')}</em>
               </button>
             `;

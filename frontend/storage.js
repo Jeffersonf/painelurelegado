@@ -132,7 +132,7 @@ const APRIL_SUPERVISOR_SHEET_LINK = {
 
 const CAR_SCHEDULE_LINK = {
   label: 'Agenda de carros oficiais',
-  url: 'https://seesp-my.sharepoint.com/:l:/g/personal/itv_seintec_educacao_sp_gov_br/JACaDeD8XkaHRaX2WSJPMXJ6AUCrQaodqExoAqBNE7w0JR4?e=LkPfD3',
+  url: 'https://seesp-my.sharepoint.com/:l:/g/personal/itv_seintec_educacao_sp_gov_br/JACaDeD8XkaHRaX2WSJPMXJ6ARg_YVMIXarwCYu78XAnEOs?e=9Dn1Da',
   category: 'car-schedule',
   sourceType: 'sharepoint-list'
 };
