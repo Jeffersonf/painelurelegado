@@ -1,16 +1,3 @@
 ﻿ID,Chefe,Setor,Data,Data.,DataDevolu_x00e7__x00e3_o,DataDevolu_x00e7__x00e3_o.,MotivoVisita,Ve_x00ed_culo,Condutor,Escolas,Status,Coment_x00e1_rioGestor,E_x002d_mail,LocalExterno,ItemChildCount,FolderChildCount
-16,,SEINTEC,20/05/2026 08:00,2026-05-20T11:00:00Z,20/05/2026 12:00,2026-05-20T15:00:00Z,BI equipamentos ,Veículo Utilitário,,,Aprovado,,itv.seintec@educacao.sp.gov.br,,0,0
-17,,SEINTEC,20/05/2026 13:00,2026-05-20T16:00:00Z,20/05/2026 15:00,2026-05-20T18:00:00Z,teste,Veículo Pick-up,,,Recusado,teste de recusa,itv.seintec@educacao.sp.gov.br,,0,0
-18,,SEINTEC,18/05/2026 16:15,2026-05-18T19:15:00Z,18/05/2026 18:00,2026-05-18T21:00:00Z,,Veículo Utilitário,,,Recusado,Veículo será utilizado pelo Gabinete ,itv.seintec@educacao.sp.gov.br,,0,0
-19,,SEINTEC,18/05/2026 16:20,2026-05-18T19:20:00Z,18/05/2026 18:00,2026-05-18T21:00:00Z,,Veículo Utilitário,,,Aprovado,,itv.seintec@educacao.sp.gov.br,,0,0
-20,,GABINETE,23/05/2026 00:00,2026-05-23T03:00:00Z,29/05/2026 00:00,2026-05-29T03:00:00Z,,Veículo Utilitário,,,Recusado,Fgh,itv@educacao.sp.gov.br,,0,0
-30,,SEINTEC,29/05/2026 07:00,2026-05-29T10:00:00Z,29/05/2026 10:00,2026-05-29T13:00:00Z,Teste,Veículo Utilitário,,,Aprovado,,itv.seintec@educacao.sp.gov.br,Teste externo ,0,0
-31,,SEINTEC,05/06/2026 00:00,2026-06-05T03:00:00Z,05/06/2026 13:00,2026-06-05T16:00:00Z,Tsehshaj,Veículo Utilitário,,,Aprovado,,itv.seintec@educacao.sp.gov.br,Hrt,0,0
-32,,SEINTEC,21/05/2026 08:00,2026-05-21T11:00:00Z,21/05/2026 12:00,2026-05-21T15:00:00Z,visita,Veículo Utilitário,,,Recusado,carro ocupado,itv.seintec@educacao.sp.gov.br,,0,0
-33,,SEGRE,25/05/2026 08:00,2026-05-25T11:00:00Z,25/05/2026 14:00,2026-05-25T17:00:00Z,teste,Veículo Utilitário,,,Aprovado,,itv.segre@educacao.sp.gov.br,,0,0
-34,,SEGRE,22/06/2026 08:00,2026-06-22T11:00:00Z,24/06/2026 22:00,2026-06-25T01:00:00Z,Reunião Censo Escolar - teste,Veículo Utilitário,,,Recusado,teste,itv.segre@educacao.sp.gov.br,Aguas de Lindoia - ,0,0
-35,,SEINTEC,18/06/2026 15:00,2026-06-18T18:00:00Z,18/06/2026 17:00,2026-06-18T20:00:00Z,teste,Veículo Utilitário,,,Aprovado,,itv.seintec@educacao.sp.gov.br,,0,0
-36,,SEINTEC,31/07/2026 00:00,2026-07-31T03:00:00Z,31/07/2026 18:00,2026-07-31T21:00:00Z,rerew,Veículo Utilitário,,,Aprovado,,itv.seintec@educacao.sp.gov.br,Muito Ruim,0,0
-37,,SEINTEC,24/06/2026 16:00,2026-06-24T19:00:00Z,25/06/2026 17:00,2026-06-25T20:00:00Z,teste,Veículo Utilitário,,,Recusado,teste,itv.seintec@educacao.sp.gov.br,,0,0
-38,,SEINTEC,08/07/2026 18:00,2026-07-08T21:00:00Z,08/07/2026 19:00,2026-07-08T22:00:00Z,4t53,Veículo Utilitário,,,Aprovado,,itv.seintec@educacao.sp.gov.br,teste,0,0
-39,,SEINTEC,06/07/2026 00:00,2026-07-06T03:00:00Z,06/07/2026 17:00,2026-07-06T20:00:00Z,few,Veículo Utilitário,,,Recusado,teste de recusa,itv.seintec@educacao.sp.gov.br,testgewtew,0,0
+45,,SEOM,25/05/2026 00:00,2026-05-25T03:00:00Z,25/05/2026 17:00,2026-05-25T20:00:00Z,"Vistoria BI Manutenção Predial; Plano de Ação URE ITV 2026/1",Veículo Utilitário,,,Pendente,,itv.seom@educacao.sp.gov.br,,0,0
+46,,SEOM,26/05/2026 00:00,2026-05-26T03:00:00Z,26/05/2026 17:00,2026-05-26T20:00:00Z,"Vistoria BI Manutenção Predial; Plano de Ação URE ITV 2026/1",Veículo Utilitário,,,Pendente,,itv.seom@educacao.sp.gov.br,,0,0
