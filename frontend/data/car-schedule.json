@@ -1,7 +1,7 @@
 {
   "source": "sharepoint-public-html",
   "sourceUrl": "https://seesp-my.sharepoint.com/:l:/g/personal/itv_seintec_educacao_sp_gov_br/JACaDeD8XkaHRaX2WSJPMXJ6ARg_YVMIXarwCYu78XAnEOs?e=9Dn1Da",
-  "updatedAt": "2026-05-22T17:06:24.292Z",
+  "updatedAt": "2026-05-22T19:11:58.390Z",
   "items": [
     {
       "ID": "45",
@@ -11,7 +11,7 @@
       "ContentTypeId": "0x01007FA25262C2953644BE57ADE688A9545D009C72709D50DCE442A8FB95E0900EEAE7",
       "FileRef": "/personal/itv_seintec_educacao_sp_gov_br/Lists/ReservasVeiculos/45_.000",
       "Attachments": "0",
-      "SMTotalSize": "434",
+      "SMTotalSize": "724",
       "_CommentFlags": "",
       "_CommentCount": "",
       "_ColorHex": "",
@@ -47,14 +47,14 @@
           "isSecretFieldValue": false
         }
       ],
-      "Status": "Pendente",
+      "Status": "Aprovado",
       "Coment_x00e1_rioGestor": "",
       "E_x002d_mail": "itv.seom@educacao.sp.gov.br",
       "LocalExterno": "",
       "ItemChildCount": "0",
       "FolderChildCount": "0",
       "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
-      "owshiddenversion": "1",
+      "owshiddenversion": "2",
       "Restricted": "",
       "PreviewThumbnailsQualitySets": ""
     },
@@ -66,7 +66,7 @@
       "ContentTypeId": "0x01007FA25262C2953644BE57ADE688A9545D009C72709D50DCE442A8FB95E0900EEAE7",
       "FileRef": "/personal/itv_seintec_educacao_sp_gov_br/Lists/ReservasVeiculos/46_.000",
       "Attachments": "0",
-      "SMTotalSize": "434",
+      "SMTotalSize": "724",
       "_CommentFlags": "",
       "_CommentCount": "",
       "_ColorHex": "",
@@ -102,14 +102,179 @@
           "isSecretFieldValue": false
         }
       ],
-      "Status": "Pendente",
+      "Status": "Aprovado",
       "Coment_x00e1_rioGestor": "",
       "E_x002d_mail": "itv.seom@educacao.sp.gov.br",
       "LocalExterno": "",
       "ItemChildCount": "0",
       "FolderChildCount": "0",
       "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
-      "owshiddenversion": "1",
+      "owshiddenversion": "2",
+      "Restricted": "",
+      "PreviewThumbnailsQualitySets": ""
+    },
+    {
+      "ID": "47",
+      "PermMask": "0x3000031027",
+      "FSObjType": "0",
+      "UniqueId": "{937CA07D-0721-46F2-BE3C-DDC6FD45CDD2}",
+      "ContentTypeId": "0x01007FA25262C2953644BE57ADE688A9545D009C72709D50DCE442A8FB95E0900EEAE7",
+      "FileRef": "/personal/itv_seintec_educacao_sp_gov_br/Lists/ReservasVeiculos/47_.000",
+      "Attachments": "0",
+      "SMTotalSize": "560",
+      "_CommentFlags": "",
+      "_CommentCount": "",
+      "_ColorHex": "",
+      "_ColorTag": "",
+      "_Emoji": "",
+      "Chefe": [
+        {
+          "lookupId": 6,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Setor": "GABINETE",
+      "Data": "25/05/2026 12:30",
+      "Data.": "2026-05-25T15:30:00Z",
+      "Data.FriendlyDisplay": "",
+      "DataDevolu_x00e7__x00e3_o": "25/05/2026 17:00",
+      "DataDevolu_x00e7__x00e3_o.": "2026-05-25T20:00:00Z",
+      "DataDevolu_x00e7__x00e3_o.FriendlyDisplay": "",
+      "MotivoVisita": "Acompanhamento em ATPCG",
+      "Ve_x00ed_culo": "Veículo Pick-up",
+      "Condutor": [
+        {
+          "lookupId": 1,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Escolas": [
+        {
+          "lookupId": 6,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Status": "Aprovado",
+      "Coment_x00e1_rioGestor": "",
+      "E_x002d_mail": "itv@educacao.sp.gov.br",
+      "LocalExterno": "",
+      "ItemChildCount": "0",
+      "FolderChildCount": "0",
+      "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
+      "owshiddenversion": "2",
+      "Restricted": "",
+      "PreviewThumbnailsQualitySets": ""
+    },
+    {
+      "ID": "48",
+      "PermMask": "0x3000031027",
+      "FSObjType": "0",
+      "UniqueId": "{C2A378E0-024F-42AF-9779-F462CD8CFA78}",
+      "ContentTypeId": "0x01007FA25262C2953644BE57ADE688A9545D009C72709D50DCE442A8FB95E0900EEAE7",
+      "FileRef": "/personal/itv_seintec_educacao_sp_gov_br/Lists/ReservasVeiculos/48_.000",
+      "Attachments": "0",
+      "SMTotalSize": "668",
+      "_CommentFlags": "",
+      "_CommentCount": "",
+      "_ColorHex": "",
+      "_ColorTag": "",
+      "_Emoji": "",
+      "Chefe": [
+        {
+          "lookupId": 3,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Setor": "SEAFIN",
+      "Data": "22/05/2026 16:00",
+      "Data.": "2026-05-22T19:00:00Z",
+      "Data.FriendlyDisplay": "",
+      "DataDevolu_x00e7__x00e3_o": "22/05/2026 16:30",
+      "DataDevolu_x00e7__x00e3_o.": "2026-05-22T19:30:00Z",
+      "DataDevolu_x00e7__x00e3_o.FriendlyDisplay": "",
+      "MotivoVisita": "Entrega de kit lanche",
+      "Ve_x00ed_culo": "Veículo Utilitário",
+      "Condutor": [
+        {
+          "lookupId": 7,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Escolas": [
+        {
+          "lookupId": 23,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Status": "Aprovado",
+      "Coment_x00e1_rioGestor": "",
+      "E_x002d_mail": "itv.seafin@educacao.sp.gov.br",
+      "LocalExterno": "Empresa de transporte",
+      "ItemChildCount": "0",
+      "FolderChildCount": "0",
+      "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
+      "owshiddenversion": "2",
+      "Restricted": "",
+      "PreviewThumbnailsQualitySets": ""
+    },
+    {
+      "ID": "49",
+      "PermMask": "0x3000031027",
+      "FSObjType": "0",
+      "UniqueId": "{0599BFD4-A32D-441B-9E3A-005B37793373}",
+      "ContentTypeId": "0x01007FA25262C2953644BE57ADE688A9545D009C72709D50DCE442A8FB95E0900EEAE7",
+      "FileRef": "/personal/itv_seintec_educacao_sp_gov_br/Lists/ReservasVeiculos/49_.000",
+      "Attachments": "0",
+      "SMTotalSize": "932",
+      "_CommentFlags": "",
+      "_CommentCount": "",
+      "_ColorHex": "",
+      "_ColorTag": "",
+      "_Emoji": "",
+      "Chefe": [
+        {
+          "lookupId": 2,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Setor": "SEOM",
+      "Data": "27/05/2026 00:00",
+      "Data.": "2026-05-27T03:00:00Z",
+      "Data.FriendlyDisplay": "",
+      "DataDevolu_x00e7__x00e3_o": "27/05/2026 15:00",
+      "DataDevolu_x00e7__x00e3_o.": "2026-05-27T18:00:00Z",
+      "DataDevolu_x00e7__x00e3_o.FriendlyDisplay": "",
+      "MotivoVisita": "Reunião: gestão escolar estadual e municipal, secretário municipal de obras de Capão Bonito, e o SEOM da URE ITV",
+      "Ve_x00ed_culo": "Veículo Utilitário",
+      "Condutor": [
+        {
+          "lookupId": 6,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Escolas": [
+        {
+          "lookupId": 4,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Status": "Aprovado",
+      "Coment_x00e1_rioGestor": "",
+      "E_x002d_mail": "itv.seom@educacao.sp.gov.br",
+      "LocalExterno": "",
+      "ItemChildCount": "0",
+      "FolderChildCount": "0",
+      "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
+      "owshiddenversion": "2",
       "Restricted": "",
       "PreviewThumbnailsQualitySets": ""
     }
