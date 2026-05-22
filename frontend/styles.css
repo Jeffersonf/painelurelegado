@@ -3278,10 +3278,6 @@ select:focus-visible,
   color: var(--tx);
 }
 
-.car-summary-box {
-  margin-bottom: 14px;
-}
-
 #page-cars .car-grid {
   display: grid;
   gap: 12px;
@@ -3434,23 +3430,25 @@ select:focus-visible,
 
 #page-cars .car-booking-card {
   width: 100%;
-  min-height: 66px;
+  min-height: 84px;
   display: grid;
-  grid-template-columns: 76px minmax(0, 1.15fr) minmax(0, .85fr) minmax(0, .9fr) auto;
-  gap: 12px;
-  align-items: center;
-  padding: 12px 15px;
-  border: 0;
-  border-bottom: 1px solid var(--bd);
-  border-radius: 0;
-  background: transparent;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 9px 12px;
+  align-items: start;
+  padding: 12px;
+  border: 1px solid var(--bd);
+  border-radius: 12px;
+  background: rgba(255,255,255,.025);
   color: var(--tx);
   cursor: default;
   text-align: left;
 }
 
-#page-cars .car-booking-card:last-child {
-  border-bottom: 0;
+#page-cars .car-booking-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
+  gap: 10px;
+  padding: 12px;
 }
 
 #page-cars .car-booking-warn {
@@ -3467,6 +3465,10 @@ select:focus-visible,
 .car-route small,
 .car-requester strong,
 .car-requester small,
+.car-request-id strong,
+.car-request-id small,
+.car-request-main strong,
+.car-request-main small,
 .car-note {
   display: block;
   overflow: hidden;
@@ -3474,13 +3476,34 @@ select:focus-visible,
   white-space: nowrap;
 }
 
-.car-time strong {
-  font-size: 15px;
+.car-request-id {
+  grid-row: span 2;
+}
+
+.car-request-id small {
+  color: var(--mt);
+  font-size: 9px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.car-request-id strong {
+  margin-top: 3px;
+  color: var(--tx);
+  font-family: var(--font-money);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.car-request-main strong {
+  font-size: 13px;
+  line-height: 1.25;
 }
 
 .car-time small,
 .car-route small,
 .car-requester small,
+.car-request-main small,
 .car-note {
   margin-top: 4px;
   color: var(--mt);
@@ -3492,6 +3515,17 @@ select:focus-visible,
   display: none;
 }
 
+#page-cars .car-booking-card .diag-pill {
+  justify-self: end;
+  min-width: 78px;
+  padding-inline: 8px;
+  font-size: 9px;
+}
+
+#page-cars .car-booking-full .car-note {
+  grid-column: 1 / -1;
+}
+
 @media(max-width:900px) {
   #page-cars .car-filterbar {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3499,10 +3533,6 @@ select:focus-visible,
 
   #page-cars .car-widget-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  #page-cars .car-booking-card {
-    grid-template-columns: 70px minmax(0, 1fr);
   }
 
   #page-cars .car-booking-card .diag-pill {
@@ -3530,10 +3560,7 @@ select:focus-visible,
     display: none;
   }
 
-  #page-cars .car-booking-card {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
+  #page-cars .car-booking-card { grid-template-columns: 1fr; }
 }
 
 /* ─── NOTIFICACAO PERSISTENTE (Android) ─────────── */

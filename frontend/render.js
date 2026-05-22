@@ -2856,6 +2856,20 @@ function carDateLabel(value) {
   return date.toLocaleDateString('pt-BR', { weekday: 'short', day: '2-digit', month: '2-digit' });
 }
 
+function carFullDateLabel(item) {
+  const date = item?.date && /^\d{4}-\d{2}-\d{2}/.test(item.date)
+    ? new Date(`${item.date.slice(0, 10)}T00:00:00`)
+    : null;
+  const dateLabel = date && !Number.isNaN(date.getTime())
+    ? date.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' })
+    : item?.date || 'Sem data';
+  return item?.time ? `${dateLabel} ${item.time}` : dateLabel;
+}
+
+function canViewCarRequestDetails() {
+  return ['admin', 'dirigente', 'seintec', 'setec', 'seom'].includes(currentUserRole());
+}
+
 function setSimpleSelectOptions(select, options, currentValue = 'all') {
   if (!select) return;
   const value = options.some((item) => item.value === currentValue) ? currentValue : 'all';
@@ -2976,21 +2990,6 @@ function renderCars() {
       : 'Fonte: SharePoint ReservasVeiculos. Use Atualizar para recarregar.';
   }
 
-  const summaryRows = document.getElementById('carSummaryRows');
-  if (summaryRows) {
-    summaryRows.innerHTML = [
-      ['Reservas', visible.length, 'no filtro atual', 'primary'],
-      ['Reservados', reserved, 'confirmados', 'ok'],
-      ['Pendentes', pending, 'aguardando', pending ? 'warn' : 'ok'],
-      ['Bloqueios', blocked, 'cancelados/recusados', blocked ? 'danger' : 'ok']
-    ].map(([label, value, note, tone]) => `
-      <span class="car-widget-${tone}">
-        <strong>${esc(String(value))}</strong>
-        <small>${esc(label)} | ${esc(note)}</small>
-      </span>
-    `).join('');
-  }
-
   if (!visible.length) {
     grid.innerHTML = `
       ${renderCarCalendar(visible)}
@@ -3004,31 +3003,27 @@ function renderCars() {
     acc.set(key, [...(acc.get(key) || []), item]);
     return acc;
   }, new Map());
+  const showDetails = canViewCarRequestDetails();
 
   grid.innerHTML = `
-    <section class="car-widget-strip car-widget-strip-top">
-      <span class="car-widget-primary"><strong>${visible.length}</strong><small>reservas no mes</small></span>
-      <span><strong>${reserved}</strong><small>aprovadas</small></span>
-      <span><strong>${pending}</strong><small>pendentes</small></span>
-      <span><strong>${vehicles.length}</strong><small>veiculos</small></span>
-    </section>
     ${renderCarCalendar(visible)}
     <section class="car-day-list">
       ${Array.from(byDate.entries()).map(([date, items]) => `
         <article class="car-day-group">
           <div class="car-day-head"><strong>${esc(carDateLabel(date))}</strong><small>${esc(String(items.length))} reserva(s)</small></div>
-          ${items.map((item) => {
+          <div class="car-booking-grid">
+            ${items.map((item) => {
             const tone = carStatusTone(item.status);
             return `
-              <button class="car-booking-card car-booking-${tone}" type="button">
-                <span class="car-time"><strong>${esc(item.time || '--:--')}</strong><small>${esc(item.requestId || '--')}</small></span>
-                <span class="car-route"><strong>${esc(item.destination || 'Destino nao informado')}</strong><small>${esc(item.vehicle)}</small></span>
-                <span class="car-requester"><strong>${esc(item.requester || 'Setor nao informado')}</strong><small>${esc(item.driver || 'Condutor a definir')}</small></span>
-                <span class="car-note">${esc(item.note || item.title || '')}</span>
+              <button class="car-booking-card car-booking-${tone} ${showDetails ? 'car-booking-full' : 'car-booking-limited'}" type="button">
+                <span class="car-request-id"><small>Pedido</small><strong>#${esc(item.requestId || '--')}</strong></span>
+                <span class="car-request-main"><strong>${esc(item.vehicle || 'Carro oficial')}</strong><small>${esc(carFullDateLabel(item))}</small></span>
                 <em class="diag-pill ${tone === 'danger' ? 'pill-danger' : tone === 'warn' ? 'pill-warn' : tone === 'info' ? 'pill-info' : 'pill-ok'}">${esc(item.status || 'pendente')}</em>
+                ${showDetails ? `<span class="car-note">${esc(item.note || item.title || '')}</span>` : ''}
               </button>
             `;
           }).join('')}
+          </div>
         </article>
       `).join('')}
     </section>
