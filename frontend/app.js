@@ -458,12 +458,20 @@ function isRestrictedCtcUser() {
   return user?.role === 'ctc' && ['bruno', 'danilo'].includes(normalizeKey(user.login || user.name));
 }
 
+function isLegacyReadOnlyMode() {
+  const explicit = window.SETECHUB_LEGACY_READONLY === true || localStorage.getItem('setechub_legacy_readonly') === '1';
+  const locationText = `${location.hostname || ''} ${location.pathname || ''}`.toLowerCase();
+  return explicit || locationText.includes('painelurelegado') || locationText.includes('setechublegado');
+}
+
 function canEditData() {
+  if (isLegacyReadOnlyMode()) return false;
   if (VIEWER_MODE_V1) return canManageUsers();
   return ['admin', 'seintec', 'ctc'].includes(currentUserRole());
 }
 
 function canManageUsers() {
+  if (isLegacyReadOnlyMode()) return false;
   return sessionStorage.getItem(SESSION_KEY) === 'ok' && currentUserRole() === 'admin';
 }
 

@@ -36,6 +36,10 @@ async function refreshServerHealth() {
 }
 
 async function saveStateToServer() {
+  if (typeof isLegacyReadOnlyMode === 'function' && isLegacyReadOnlyMode()) {
+    alert('Este PainelURE legado esta em modo somente leitura.');
+    return;
+  }
   if (!canManageUsers()) return;
   if (!canUseLocalApi()) {
     alert('Abra o SETECHUB pelo servidor local para salvar estado na API.');
@@ -402,6 +406,10 @@ async function flushSupabaseAutoSave() {
 }
 
 async function saveStateToSupabase() {
+  if (typeof isLegacyReadOnlyMode === 'function' && isLegacyReadOnlyMode()) {
+    alert('Este PainelURE legado esta em modo somente leitura.');
+    return;
+  }
   if (!canManageUsers()) return;
   await writeStateToSupabase();
 }

@@ -855,7 +855,7 @@ function mergeDirectoryContacts(baseItems, savedItems) {
   return Array.from(map.values());
 }
 
-function defaultUsers(supervisors, pecs = defaultPecs()) {
+function defaultUsers(supervisors) {
   const supervisorUsers = supervisors.map((supervisor, index) => ({
     id: `user-supervisor-${index + 1}`,
     name: supervisor.name,
@@ -863,15 +863,6 @@ function defaultUsers(supervisors, pecs = defaultPecs()) {
     pin: '1234',
     role: 'supervisor',
     supervisorName: supervisor.name,
-    active: true
-  }));
-  const pecUsers = pecs.map((pec) => ({
-    id: `user-${pec.id}`,
-    name: pec.name,
-    login: pec.login,
-    pin: '1234',
-    role: 'pec',
-    area: pec.role,
     active: true
   }));
   return [
@@ -931,7 +922,6 @@ function defaultUsers(supervisors, pecs = defaultPecs()) {
       role: 'ctc',
       active: true
     },
-    ...pecUsers,
     ...supervisorUsers
   ];
 }
@@ -1377,6 +1367,7 @@ function rememberPersistedState(value) {
 }
 
 function saveState() {
+  if (typeof isLegacyReadOnlyMode === 'function' && isLegacyReadOnlyMode()) return false;
   if (typeof resetDerivedCache === 'function') resetDerivedCache();
   const comparable = JSON.stringify(comparableStateForPersistence(state));
   if (comparable === lastSavedStateComparable) return false;
