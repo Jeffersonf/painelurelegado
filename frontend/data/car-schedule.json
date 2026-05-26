@@ -1,7 +1,7 @@
 {
   "source": "sharepoint-public-html",
   "sourceUrl": "https://seesp-my.sharepoint.com/:l:/g/personal/itv_seintec_educacao_sp_gov_br/JACaDeD8XkaHRaX2WSJPMXJ6ARg_YVMIXarwCYu78XAnEOs?e=9Dn1Da",
-  "updatedAt": "2026-05-26T19:33:12.179Z",
+  "updatedAt": "2026-05-26T21:41:24.477Z",
   "items": [
     {
       "ID": "45",
@@ -231,7 +231,7 @@
       "ContentTypeId": "0x01007FA25262C2953644BE57ADE688A9545D009C72709D50DCE442A8FB95E0900EEAE7",
       "FileRef": "/personal/itv_seintec_educacao_sp_gov_br/Lists/ReservasVeiculos/49_.000",
       "Attachments": "0",
-      "SMTotalSize": "932",
+      "SMTotalSize": "1404",
       "_CommentFlags": "",
       "_CommentCount": "",
       "_ColorHex": "",
@@ -251,8 +251,8 @@
       "DataDevolu_x00e7__x00e3_o": "27/05/2026 15:00",
       "DataDevolu_x00e7__x00e3_o.": "2026-05-27T18:00:00Z",
       "DataDevolu_x00e7__x00e3_o.FriendlyDisplay": "",
-      "MotivoVisita": "Reunião: gestão escolar estadual e municipal, secretário municipal de obras de Capão Bonito, e o SEOM da URE ITV",
-      "Ve_x00ed_culo": "Veículo Utilitário",
+      "MotivoVisita": "Reunião: gestão escolar estadual e municipal, secretário municipal de obras de Capão Bonito, e o SEOM da URE ITV. André irá realizar visita em Capão Bonito.",
+      "Ve_x00ed_culo": "Veículo Pick-up",
       "Condutor": [
         {
           "lookupId": 6,
@@ -274,7 +274,7 @@
       "ItemChildCount": "0",
       "FolderChildCount": "0",
       "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
-      "owshiddenversion": "2",
+      "owshiddenversion": "3",
       "Restricted": "",
       "PreviewThumbnailsQualitySets": ""
     },
