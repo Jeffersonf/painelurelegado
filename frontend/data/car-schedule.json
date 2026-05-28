@@ -1,7 +1,7 @@
 {
   "source": "sharepoint-public-html",
   "sourceUrl": "https://seesp-my.sharepoint.com/:l:/g/personal/itv_seintec_educacao_sp_gov_br/JACaDeD8XkaHRaX2WSJPMXJ6ARg_YVMIXarwCYu78XAnEOs?e=9Dn1Da",
-  "updatedAt": "2026-05-28T10:53:21.771Z",
+  "updatedAt": "2026-05-28T14:35:56.614Z",
   "items": [
     {
       "ID": "45",
@@ -326,6 +326,171 @@
       "Coment_x00e1_rioGestor": "",
       "E_x002d_mail": "itv@educacao.sp.gov.br",
       "LocalExterno": "Itapetininga / Programa Alfabetiva Juntos ",
+      "ItemChildCount": "0",
+      "FolderChildCount": "0",
+      "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
+      "owshiddenversion": "2",
+      "Restricted": "",
+      "PreviewThumbnailsQualitySets": ""
+    },
+    {
+      "ID": "51",
+      "PermMask": "0x3000031027",
+      "FSObjType": "0",
+      "UniqueId": "{2F9A83B8-7518-47E2-8887-7A12C8F6880D}",
+      "ContentTypeId": "0x01007FA25262C2953644BE57ADE688A9545D009C72709D50DCE442A8FB95E0900EEAE7",
+      "FileRef": "/personal/itv_seintec_educacao_sp_gov_br/Lists/ReservasVeiculos/51_.000",
+      "Attachments": "0",
+      "SMTotalSize": "712",
+      "_CommentFlags": "",
+      "_CommentCount": "",
+      "_ColorHex": "",
+      "_ColorTag": "",
+      "_Emoji": "",
+      "Chefe": [
+        {
+          "lookupId": 2,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Setor": "SEOM",
+      "Data": "28/05/2026 09:10",
+      "Data.": "2026-05-28T12:10:00Z",
+      "Data.FriendlyDisplay": "",
+      "DataDevolu_x00e7__x00e3_o": "28/05/2026 17:00",
+      "DataDevolu_x00e7__x00e3_o.": "2026-05-28T20:00:00Z",
+      "DataDevolu_x00e7__x00e3_o.FriendlyDisplay": "",
+      "MotivoVisita": "Visita Técnica. Reunião com Secretário Municipal de Obras",
+      "Ve_x00ed_culo": "Veículo Utilitário",
+      "Condutor": [
+        {
+          "lookupId": 6,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Escolas": [
+        {
+          "lookupId": 4,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Status": "Aprovado",
+      "Coment_x00e1_rioGestor": "",
+      "E_x002d_mail": "itv.seom@educacao.sp.gov.br",
+      "LocalExterno": "",
+      "ItemChildCount": "0",
+      "FolderChildCount": "0",
+      "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
+      "owshiddenversion": "2",
+      "Restricted": "",
+      "PreviewThumbnailsQualitySets": ""
+    },
+    {
+      "ID": "52",
+      "PermMask": "0x3000031027",
+      "FSObjType": "0",
+      "UniqueId": "{EF1F2F28-CC5A-43CA-A338-95FBFB6E8CD2}",
+      "ContentTypeId": "0x01007FA25262C2953644BE57ADE688A9545D009C72709D50DCE442A8FB95E0900EEAE7",
+      "FileRef": "/personal/itv_seintec_educacao_sp_gov_br/Lists/ReservasVeiculos/52_.000",
+      "Attachments": "0",
+      "SMTotalSize": "984",
+      "_CommentFlags": "",
+      "_CommentCount": "",
+      "_ColorHex": "",
+      "_ColorTag": "",
+      "_Emoji": "",
+      "Chefe": [
+        {
+          "lookupId": 1,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Setor": "SEINTEC",
+      "Data": "29/05/2026 08:00",
+      "Data.": "2026-05-29T11:00:00Z",
+      "Data.FriendlyDisplay": "",
+      "DataDevolu_x00e7__x00e3_o": "29/05/2026 17:00",
+      "DataDevolu_x00e7__x00e3_o.": "2026-05-29T20:00:00Z",
+      "DataDevolu_x00e7__x00e3_o.FriendlyDisplay": "",
+      "MotivoVisita": "Visita Seintec / Setec  as unidades escolares de Nova campina para Verificação de alguns equipamentos dessas unidades .",
+      "Ve_x00ed_culo": "Veículo Utilitário",
+      "Condutor": [
+        {
+          "lookupId": 4,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Escolas": [
+        {
+          "lookupId": 18,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Status": "Aprovado",
+      "Coment_x00e1_rioGestor": "",
+      "E_x002d_mail": "itv.seintec@educacao.sp.gov.br",
+      "LocalExterno": "",
+      "ItemChildCount": "0",
+      "FolderChildCount": "0",
+      "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
+      "owshiddenversion": "2",
+      "Restricted": "",
+      "PreviewThumbnailsQualitySets": ""
+    },
+    {
+      "ID": "53",
+      "PermMask": "0x3000031027",
+      "FSObjType": "0",
+      "UniqueId": "{3C71E95C-B1AE-46B3-9CA6-248A4C90AC0F}",
+      "ContentTypeId": "0x01007FA25262C2953644BE57ADE688A9545D009C72709D50DCE442A8FB95E0900EEAE7",
+      "FileRef": "/personal/itv_seintec_educacao_sp_gov_br/Lists/ReservasVeiculos/53_.000",
+      "Attachments": "0",
+      "SMTotalSize": "536",
+      "_CommentFlags": "",
+      "_CommentCount": "",
+      "_ColorHex": "",
+      "_ColorTag": "",
+      "_Emoji": "",
+      "Chefe": [
+        {
+          "lookupId": 6,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Setor": "GABINETE",
+      "Data": "28/05/2026 13:00",
+      "Data.": "2026-05-28T16:00:00Z",
+      "Data.FriendlyDisplay": "",
+      "DataDevolu_x00e7__x00e3_o": "28/05/2026 17:00",
+      "DataDevolu_x00e7__x00e3_o.": "2026-05-28T20:00:00Z",
+      "DataDevolu_x00e7__x00e3_o.FriendlyDisplay": "",
+      "MotivoVisita": "Visita na escola ",
+      "Ve_x00ed_culo": "Veículo Pick-up",
+      "Condutor": [
+        {
+          "lookupId": 1,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Escolas": [
+        {
+          "lookupId": 1,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Status": "Aprovado",
+      "Coment_x00e1_rioGestor": "",
+      "E_x002d_mail": "itv@educacao.sp.gov.br",
+      "LocalExterno": "",
       "ItemChildCount": "0",
       "FolderChildCount": "0",
       "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
