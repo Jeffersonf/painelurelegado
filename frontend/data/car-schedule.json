@@ -1,7 +1,7 @@
 {
   "source": "sharepoint-public-html",
   "sourceUrl": "https://seesp-my.sharepoint.com/:l:/g/personal/itv_seintec_educacao_sp_gov_br/JACaDeD8XkaHRaX2WSJPMXJ6ARg_YVMIXarwCYu78XAnEOs?e=9Dn1Da",
-  "updatedAt": "2026-06-11T11:23:45.746Z",
+  "updatedAt": "2026-06-11T15:02:50.242Z",
   "items": [
     {
       "ID": "45",
@@ -931,6 +931,61 @@
       "Coment_x00e1_rioGestor": "",
       "E_x002d_mail": "itv.seintec@educacao.sp.gov.br",
       "LocalExterno": "",
+      "ItemChildCount": "0",
+      "FolderChildCount": "0",
+      "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
+      "owshiddenversion": "2",
+      "Restricted": "",
+      "PreviewThumbnailsQualitySets": ""
+    },
+    {
+      "ID": "63",
+      "PermMask": "0x3000031027",
+      "FSObjType": "0",
+      "UniqueId": "{CF1F8442-EEC8-4F18-9D78-C4C5637244CA}",
+      "ContentTypeId": "0x01007FA25262C2953644BE57ADE688A9545D009C72709D50DCE442A8FB95E0900EEAE7",
+      "FileRef": "/personal/itv_seintec_educacao_sp_gov_br/Lists/ReservasVeiculos/63_.000",
+      "Attachments": "0",
+      "SMTotalSize": "1364",
+      "_CommentFlags": "",
+      "_CommentCount": "",
+      "_ColorHex": "",
+      "_ColorTag": "",
+      "_Emoji": "",
+      "Chefe": [
+        {
+          "lookupId": 6,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Setor": "GABINETE",
+      "Data": "11/06/2026 10:30",
+      "Data.": "2026-06-11T13:30:00Z",
+      "Data.FriendlyDisplay": "",
+      "DataDevolu_x00e7__x00e3_o": "11/06/2026 22:30",
+      "DataDevolu_x00e7__x00e3_o.": "2026-06-12T01:30:00Z",
+      "DataDevolu_x00e7__x00e3_o.FriendlyDisplay": "",
+      "MotivoVisita": "Evento -Dialogo com a Educação  / Secretario Renato Feder  / São Raque-SP /  Visita na escola Turvo dos Almeidas",
+      "Ve_x00ed_culo": "Veículo Pick-up",
+      "Condutor": [
+        {
+          "lookupId": 5,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Escolas": [
+        {
+          "lookupId": 23,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Status": "Aprovado",
+      "Coment_x00e1_rioGestor": "",
+      "E_x002d_mail": "itv@educacao.sp.gov.br",
+      "LocalExterno": "Evento -Dialogo com a Educação  / Secretario Renato Feder  / São Raque-SP /  Visita na escola Turvo dos Almeidas",
       "ItemChildCount": "0",
       "FolderChildCount": "0",
       "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
