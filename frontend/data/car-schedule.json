@@ -1,7 +1,7 @@
 {
   "source": "sharepoint-public-html",
   "sourceUrl": "https://seesp-my.sharepoint.com/:l:/g/personal/itv_seintec_educacao_sp_gov_br/JACaDeD8XkaHRaX2WSJPMXJ6ARg_YVMIXarwCYu78XAnEOs?e=9Dn1Da",
-  "updatedAt": "2026-06-18T14:59:28.758Z",
+  "updatedAt": "2026-06-18T18:09:19.350Z",
   "items": [
     {
       "ID": "45",
@@ -986,6 +986,61 @@
       "Coment_x00e1_rioGestor": "",
       "E_x002d_mail": "itv@educacao.sp.gov.br",
       "LocalExterno": "Evento -Dialogo com a Educação  / Secretario Renato Feder  / São Raque-SP /  Visita na escola Turvo dos Almeidas",
+      "ItemChildCount": "0",
+      "FolderChildCount": "0",
+      "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
+      "owshiddenversion": "2",
+      "Restricted": "",
+      "PreviewThumbnailsQualitySets": ""
+    },
+    {
+      "ID": "64",
+      "PermMask": "0x3000031027",
+      "FSObjType": "0",
+      "UniqueId": "{075DA73B-B5C1-4FC3-815C-F712145EBA48}",
+      "ContentTypeId": "0x01007FA25262C2953644BE57ADE688A9545D009C72709D50DCE442A8FB95E0900EEAE7",
+      "FileRef": "/personal/itv_seintec_educacao_sp_gov_br/Lists/ReservasVeiculos/64_.000",
+      "Attachments": "0",
+      "SMTotalSize": "796",
+      "_CommentFlags": "",
+      "_CommentCount": "",
+      "_ColorHex": "",
+      "_ColorTag": "",
+      "_Emoji": "",
+      "Chefe": [
+        {
+          "lookupId": 1,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Setor": "SEINTEC",
+      "Data": "18/06/2026 14:18",
+      "Data.": "2026-06-18T17:18:00Z",
+      "Data.FriendlyDisplay": "",
+      "DataDevolu_x00e7__x00e3_o": "18/06/2026 17:00",
+      "DataDevolu_x00e7__x00e3_o.": "2026-06-18T20:00:00Z",
+      "DataDevolu_x00e7__x00e3_o.FriendlyDisplay": "",
+      "MotivoVisita": "Verificação de internet da EE Silvério Monteiro unidade relata sem conexão.",
+      "Ve_x00ed_culo": "Veículo Pick-up",
+      "Condutor": [
+        {
+          "lookupId": 4,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Escolas": [
+        {
+          "lookupId": 19,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Status": "Aprovado",
+      "Coment_x00e1_rioGestor": "",
+      "E_x002d_mail": "itv.seintec@educacao.sp.gov.br",
+      "LocalExterno": "",
       "ItemChildCount": "0",
       "FolderChildCount": "0",
       "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
