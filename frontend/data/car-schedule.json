@@ -1,7 +1,7 @@
 {
   "source": "sharepoint-public-html",
   "sourceUrl": "https://seesp-my.sharepoint.com/:l:/g/personal/itv_seintec_educacao_sp_gov_br/JACaDeD8XkaHRaX2WSJPMXJ6ARg_YVMIXarwCYu78XAnEOs?e=9Dn1Da",
-  "updatedAt": "2026-06-19T18:52:06.892Z",
+  "updatedAt": "2026-06-19T20:25:15.402Z",
   "items": [
     {
       "ID": "45",
@@ -1100,6 +1100,61 @@
       "FolderChildCount": "0",
       "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
       "owshiddenversion": "2",
+      "Restricted": "",
+      "PreviewThumbnailsQualitySets": ""
+    },
+    {
+      "ID": "66",
+      "PermMask": "0x3000031027",
+      "FSObjType": "0",
+      "UniqueId": "{CDC5755D-6539-4C43-830C-F5FE081AE528}",
+      "ContentTypeId": "0x01007FA25262C2953644BE57ADE688A9545D009C72709D50DCE442A8FB95E0900EEAE7",
+      "FileRef": "/personal/itv_seintec_educacao_sp_gov_br/Lists/ReservasVeiculos/66_.000",
+      "Attachments": "0",
+      "SMTotalSize": "430",
+      "_CommentFlags": "",
+      "_CommentCount": "",
+      "_ColorHex": "",
+      "_ColorTag": "",
+      "_Emoji": "",
+      "Chefe": [
+        {
+          "lookupId": 3,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Setor": "SEAFIN",
+      "Data": "19/06/2026 16:40",
+      "Data.": "2026-06-19T19:40:00Z",
+      "Data.FriendlyDisplay": "",
+      "DataDevolu_x00e7__x00e3_o": "19/06/2026 17:10",
+      "DataDevolu_x00e7__x00e3_o.": "2026-06-19T20:10:00Z",
+      "DataDevolu_x00e7__x00e3_o.FriendlyDisplay": "",
+      "MotivoVisita": "Entrega de kit lanche para aulas olímpicas",
+      "Ve_x00ed_culo": "Veículo Utilitário",
+      "Condutor": [
+        {
+          "lookupId": 7,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Escolas": [
+        {
+          "lookupId": 23,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Status": "Pendente",
+      "Coment_x00e1_rioGestor": "",
+      "E_x002d_mail": "itv.seafin@educacao.sp.gov.br",
+      "LocalExterno": "Onix Turismo",
+      "ItemChildCount": "0",
+      "FolderChildCount": "0",
+      "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
+      "owshiddenversion": "1",
       "Restricted": "",
       "PreviewThumbnailsQualitySets": ""
     }
