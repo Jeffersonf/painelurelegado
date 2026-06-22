@@ -1,7 +1,7 @@
 {
   "source": "sharepoint-public-html",
   "sourceUrl": "https://seesp-my.sharepoint.com/:l:/g/personal/itv_seintec_educacao_sp_gov_br/JACaDeD8XkaHRaX2WSJPMXJ6ARg_YVMIXarwCYu78XAnEOs?e=9Dn1Da",
-  "updatedAt": "2026-06-22T18:43:15.231Z",
+  "updatedAt": "2026-06-22T21:30:10.610Z",
   "items": [
     {
       "ID": "45",
@@ -1111,7 +1111,7 @@
       "ContentTypeId": "0x01007FA25262C2953644BE57ADE688A9545D009C72709D50DCE442A8FB95E0900EEAE7",
       "FileRef": "/personal/itv_seintec_educacao_sp_gov_br/Lists/ReservasVeiculos/66_.000",
       "Attachments": "0",
-      "SMTotalSize": "430",
+      "SMTotalSize": "716",
       "_CommentFlags": "",
       "_CommentCount": "",
       "_ColorHex": "",
@@ -1147,14 +1147,69 @@
           "isSecretFieldValue": false
         }
       ],
-      "Status": "Pendente",
+      "Status": "Aprovado",
       "Coment_x00e1_rioGestor": "",
       "E_x002d_mail": "itv.seafin@educacao.sp.gov.br",
       "LocalExterno": "Onix Turismo",
       "ItemChildCount": "0",
       "FolderChildCount": "0",
       "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
-      "owshiddenversion": "1",
+      "owshiddenversion": "2",
+      "Restricted": "",
+      "PreviewThumbnailsQualitySets": ""
+    },
+    {
+      "ID": "67",
+      "PermMask": "0x3000031027",
+      "FSObjType": "0",
+      "UniqueId": "{996A4E79-8470-4024-86B6-E355FBCFB382}",
+      "ContentTypeId": "0x01007FA25262C2953644BE57ADE688A9545D009C72709D50DCE442A8FB95E0900EEAE7",
+      "FileRef": "/personal/itv_seintec_educacao_sp_gov_br/Lists/ReservasVeiculos/67_.000",
+      "Attachments": "0",
+      "SMTotalSize": "648",
+      "_CommentFlags": "",
+      "_CommentCount": "",
+      "_ColorHex": "",
+      "_ColorTag": "",
+      "_Emoji": "",
+      "Chefe": [
+        {
+          "lookupId": 6,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Setor": "GABINETE",
+      "Data": "23/06/2026 11:00",
+      "Data.": "2026-06-23T14:00:00Z",
+      "Data.FriendlyDisplay": "",
+      "DataDevolu_x00e7__x00e3_o": "25/06/2026 23:00",
+      "DataDevolu_x00e7__x00e3_o.": "2026-06-26T02:00:00Z",
+      "DataDevolu_x00e7__x00e3_o.FriendlyDisplay": "",
+      "MotivoVisita": "Posto de Combustível",
+      "Ve_x00ed_culo": "Veículo Pick-up",
+      "Condutor": [
+        {
+          "lookupId": 5,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Escolas": [
+        {
+          "lookupId": 23,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Status": "Aprovado",
+      "Coment_x00e1_rioGestor": "",
+      "E_x002d_mail": "itv@educacao.sp.gov.br",
+      "LocalExterno": "Convocação Dirigente /´SP",
+      "ItemChildCount": "0",
+      "FolderChildCount": "0",
+      "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
+      "owshiddenversion": "2",
       "Restricted": "",
       "PreviewThumbnailsQualitySets": ""
     }
