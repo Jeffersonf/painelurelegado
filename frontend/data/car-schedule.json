@@ -1,7 +1,7 @@
 {
   "source": "sharepoint-public-html",
   "sourceUrl": "https://seesp-my.sharepoint.com/:l:/g/personal/itv_seintec_educacao_sp_gov_br/JACaDeD8XkaHRaX2WSJPMXJ6ARg_YVMIXarwCYu78XAnEOs?e=9Dn1Da",
-  "updatedAt": "2026-06-23T15:44:58.116Z",
+  "updatedAt": "2026-06-23T17:49:24.896Z",
   "items": [
     {
       "ID": "45",
@@ -1210,6 +1210,116 @@
       "FolderChildCount": "0",
       "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
       "owshiddenversion": "2",
+      "Restricted": "",
+      "PreviewThumbnailsQualitySets": ""
+    },
+    {
+      "ID": "68",
+      "PermMask": "0x3000031027",
+      "FSObjType": "0",
+      "UniqueId": "{94E34F9F-76D6-430D-BD6C-3483E06E3C4B}",
+      "ContentTypeId": "0x01007FA25262C2953644BE57ADE688A9545D009C72709D50DCE442A8FB95E0900EEAE7",
+      "FileRef": "/personal/itv_seintec_educacao_sp_gov_br/Lists/ReservasVeiculos/68_.000",
+      "Attachments": "0",
+      "SMTotalSize": "508",
+      "_CommentFlags": "",
+      "_CommentCount": "",
+      "_ColorHex": "",
+      "_ColorTag": "",
+      "_Emoji": "",
+      "Chefe": [
+        {
+          "lookupId": 2,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Setor": "SEOM",
+      "Data": "25/06/2026 09:01",
+      "Data.": "2026-06-25T12:01:00Z",
+      "Data.FriendlyDisplay": "",
+      "DataDevolu_x00e7__x00e3_o": "25/06/2026 17:01",
+      "DataDevolu_x00e7__x00e3_o.": "2026-06-25T20:01:00Z",
+      "DataDevolu_x00e7__x00e3_o.FriendlyDisplay": "",
+      "MotivoVisita": "Vistorias em obras: EE Prof.ª Francelina Franco; EE Padre Arlindo Vieira; EE Dr. Raul Venturelli ",
+      "Ve_x00ed_culo": "Veículo Utilitário",
+      "Condutor": [
+        {
+          "lookupId": 6,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Escolas": [
+        {
+          "lookupId": 7,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Status": "Pendente",
+      "Coment_x00e1_rioGestor": "",
+      "E_x002d_mail": "itv.seom@educacao.sp.gov.br",
+      "LocalExterno": "",
+      "ItemChildCount": "0",
+      "FolderChildCount": "0",
+      "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
+      "owshiddenversion": "1",
+      "Restricted": "",
+      "PreviewThumbnailsQualitySets": ""
+    },
+    {
+      "ID": "69",
+      "PermMask": "0x3000031027",
+      "FSObjType": "0",
+      "UniqueId": "{135C2224-D9F9-4AE4-A7EF-E263CB885E00}",
+      "ContentTypeId": "0x01007FA25262C2953644BE57ADE688A9545D009C72709D50DCE442A8FB95E0900EEAE7",
+      "FileRef": "/personal/itv_seintec_educacao_sp_gov_br/Lists/ReservasVeiculos/69_.000",
+      "Attachments": "0",
+      "SMTotalSize": "518",
+      "_CommentFlags": "",
+      "_CommentCount": "",
+      "_ColorHex": "",
+      "_ColorTag": "",
+      "_Emoji": "",
+      "Chefe": [
+        {
+          "lookupId": 2,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Setor": "SEOM",
+      "Data": "26/06/2026 09:00",
+      "Data.": "2026-06-26T12:00:00Z",
+      "Data.FriendlyDisplay": "",
+      "DataDevolu_x00e7__x00e3_o": "26/06/2026 17:00",
+      "DataDevolu_x00e7__x00e3_o.": "2026-06-26T20:00:00Z",
+      "DataDevolu_x00e7__x00e3_o.FriendlyDisplay": "",
+      "MotivoVisita": "Vistorias em Obras: EE Simpliciano Campolim; EE Ricardo Campolim; EE Silvério Monteiro; EE Nicota Soares ",
+      "Ve_x00ed_culo": "Veículo Pick-up",
+      "Condutor": [
+        {
+          "lookupId": 7,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Escolas": [
+        {
+          "lookupId": 18,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Status": "Pendente",
+      "Coment_x00e1_rioGestor": "",
+      "E_x002d_mail": "itv.seom@educacao.sp.gov.br",
+      "LocalExterno": "",
+      "ItemChildCount": "0",
+      "FolderChildCount": "0",
+      "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
+      "owshiddenversion": "1",
       "Restricted": "",
       "PreviewThumbnailsQualitySets": ""
     }
