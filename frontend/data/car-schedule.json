@@ -1,7 +1,7 @@
 {
   "source": "sharepoint-public-html",
   "sourceUrl": "https://seesp-my.sharepoint.com/:l:/g/personal/itv_seintec_educacao_sp_gov_br/JACaDeD8XkaHRaX2WSJPMXJ6ARg_YVMIXarwCYu78XAnEOs?e=9Dn1Da",
-  "updatedAt": "2026-07-01T18:23:04.222Z",
+  "updatedAt": "2026-07-01T20:22:38.921Z",
   "items": [
     {
       "ID": "45",
@@ -1485,6 +1485,61 @@
       "FolderChildCount": "0",
       "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
       "owshiddenversion": "2",
+      "Restricted": "",
+      "PreviewThumbnailsQualitySets": ""
+    },
+    {
+      "ID": "73",
+      "PermMask": "0x3000031027",
+      "FSObjType": "0",
+      "UniqueId": "{0AD958ED-0B31-4AFB-9A2F-2015451DA886}",
+      "ContentTypeId": "0x01007FA25262C2953644BE57ADE688A9545D009C72709D50DCE442A8FB95E0900EEAE7",
+      "FileRef": "/personal/itv_seintec_educacao_sp_gov_br/Lists/ReservasVeiculos/73_.000",
+      "Attachments": "0",
+      "SMTotalSize": "486",
+      "_CommentFlags": "",
+      "_CommentCount": "",
+      "_ColorHex": "",
+      "_ColorTag": "",
+      "_Emoji": "",
+      "Chefe": [
+        {
+          "lookupId": 4,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Setor": "SEGRE",
+      "Data": "03/08/2026 07:00",
+      "Data.": "2026-08-03T10:00:00Z",
+      "Data.FriendlyDisplay": "",
+      "DataDevolu_x00e7__x00e3_o": "05/08/2026 21:00",
+      "DataDevolu_x00e7__x00e3_o.": "2026-08-06T00:00:00Z",
+      "DataDevolu_x00e7__x00e3_o.FriendlyDisplay": "",
+      "MotivoVisita": "Convocação - Formação de Classes e Matrículas 2027",
+      "Ve_x00ed_culo": "Veículo Utilitário",
+      "Condutor": [
+        {
+          "lookupId": 9,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Escolas": [
+        {
+          "lookupId": 23,
+          "lookupValue": "",
+          "isSecretFieldValue": false
+        }
+      ],
+      "Status": "Pendente",
+      "Coment_x00e1_rioGestor": "",
+      "E_x002d_mail": "itv.segre@educacao.sp.gov.br",
+      "LocalExterno": "Hotel Magestic - Águas de Lindóia ",
+      "ItemChildCount": "0",
+      "FolderChildCount": "0",
+      "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
+      "owshiddenversion": "1",
       "Restricted": "",
       "PreviewThumbnailsQualitySets": ""
     }
