@@ -1,7 +1,7 @@
 {
   "source": "sharepoint-public-html",
   "sourceUrl": "https://seesp-my.sharepoint.com/:l:/g/personal/itv_seintec_educacao_sp_gov_br/JACaDeD8XkaHRaX2WSJPMXJ6ARg_YVMIXarwCYu78XAnEOs?e=9Dn1Da",
-  "updatedAt": "2026-07-02T11:31:28.284Z",
+  "updatedAt": "2026-07-02T13:50:54.448Z",
   "items": [
     {
       "ID": "45",
@@ -1496,7 +1496,7 @@
       "ContentTypeId": "0x01007FA25262C2953644BE57ADE688A9545D009C72709D50DCE442A8FB95E0900EEAE7",
       "FileRef": "/personal/itv_seintec_educacao_sp_gov_br/Lists/ReservasVeiculos/73_.000",
       "Attachments": "0",
-      "SMTotalSize": "486",
+      "SMTotalSize": "1188",
       "_CommentFlags": "",
       "_CommentCount": "",
       "_ColorHex": "",
@@ -1532,14 +1532,14 @@
           "isSecretFieldValue": false
         }
       ],
-      "Status": "Pendente",
-      "Coment_x00e1_rioGestor": "",
+      "Status": "Recusado",
+      "Coment_x00e1_rioGestor": "Solicitamos, por gentileza, a abertura de uma nova solicitação para a reserva do carro oficial, devido à necessidade de correção da data de utilização do veículo na URE de Itapeva.",
       "E_x002d_mail": "itv.segre@educacao.sp.gov.br",
       "LocalExterno": "Hotel Magestic - Águas de Lindóia ",
       "ItemChildCount": "0",
       "FolderChildCount": "0",
       "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
-      "owshiddenversion": "1",
+      "owshiddenversion": "2",
       "Restricted": "",
       "PreviewThumbnailsQualitySets": ""
     }
