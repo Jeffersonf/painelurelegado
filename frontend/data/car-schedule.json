@@ -1,7 +1,7 @@
 {
   "source": "sharepoint-public-html",
   "sourceUrl": "https://seesp-my.sharepoint.com/:l:/g/personal/itv_seintec_educacao_sp_gov_br/JACaDeD8XkaHRaX2WSJPMXJ6ARg_YVMIXarwCYu78XAnEOs?e=9Dn1Da",
-  "updatedAt": "2026-07-06T14:05:16.680Z",
+  "updatedAt": "2026-07-06T17:19:34.848Z",
   "items": [
     {
       "ID": "45",
@@ -1606,7 +1606,7 @@
       "ContentTypeId": "0x01007FA25262C2953644BE57ADE688A9545D009C72709D50DCE442A8FB95E0900EEAE7",
       "FileRef": "/personal/itv_seintec_educacao_sp_gov_br/Lists/ReservasVeiculos/75_.000",
       "Attachments": "0",
-      "SMTotalSize": "356",
+      "SMTotalSize": "568",
       "_CommentFlags": "",
       "_CommentCount": "",
       "_ColorHex": "",
@@ -1642,14 +1642,14 @@
           "isSecretFieldValue": false
         }
       ],
-      "Status": "Pendente",
+      "Status": "Aprovado",
       "Coment_x00e1_rioGestor": "",
       "E_x002d_mail": "itv.seom@educacao.sp.gov.br",
       "LocalExterno": "",
       "ItemChildCount": "0",
       "FolderChildCount": "0",
       "ScopeId": "{B4031FBE-77F2-4F79-BED1-3723C3CC53E5}",
-      "owshiddenversion": "1",
+      "owshiddenversion": "2",
       "Restricted": "",
       "PreviewThumbnailsQualitySets": ""
     }
